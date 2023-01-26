@@ -1,3 +1,5 @@
+#function takes no arguments
+
 remind_me <- function(){
   a <- "Get that morning sunlight"
   b <- "fast"
@@ -9,3 +11,60 @@ remind_me <- function(){
   print("In case you forgot:")
   sprintf("%s, %s, %s, %s, %s, %s, %s", a,b,c,d,e,f,g)
 }
+
+remind_me()
+
+
+
+#function takes one argument
+cheat <- function(number){
+  if (number == 6){
+    cat("#Q3.1.6 \n#use build-in dataset ChickWeight and recreate ggplot
+#get max weight for Chicken 1,20,3,40,5 \nView(ChickWeight)
+\nchickens <- c(1,20,3,40,5) \nmax_weight <- numeric()
+      \nfor (i in chickens){ \nmax_weight <- append(max_weight, max(ChickWeight$weight[ChickWeight$Chick == i]))
+}
+#[1] 205 117 202 321 223  
+\n#create matrix, ad inverted commas to levels before running
+new_chickens <- data.frame(chickens,max_weight)
+new_chickens$chickens <- factor(new_chickens$chickens,
+                                levels = c(1, 20, 3, 40, 5))
+
+labels <- c(1, 20, 3, 40, 5) 
+ggplot(new_chickens, aes(x = chickens, y = max_weight))+
+    geom_col() +
+    scale_x_discrete(labels = labels)
+  ")
+  }else if (number == 11){
+    cat("#Q3.1.11 \n# recreate an animated plot \nlibrary(gganimate)
+cranlogs::cran_downloads() \nlibrary(cranlogs) 
+\n#see variables and combine to one df; put packages and dates into inverted commas
+my_packages <-
+      cran_downloads(c(caret,tidymodels),
+      from = 2014-01-01, 
+                 to = 2022-01-01)
+\nView(my_packages)
+#put title into inverted commas
+\nggplot(my_packages, aes(x=date, y=count, color=package))+
+      geom_line()+
+      labs(title=Package popularity over time)+
+      transition_reveal(date)
+        ")
+  }else if (number ==1){
+    cat("#Q3.1.1 \n#Simulate realistic grades for the exam in a histogram \n
+#add inverted commas to value of xlab, ylab and main
+x11() \nexam_grades <- rnorm(1:60, 7.5) 
+\nhist(exam_grades,
+        lwd = 3,
+        xlab = Grades,
+        xlim = range(4:10),
+        ylab = Nb. of exams,
+        cex.lab = 2,
+        main = Exam grades,
+        cex.main = 2
+      )
+  ")
+  }
+}
+
+cheat()
