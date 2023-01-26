@@ -17,8 +17,9 @@ remind_me()
 
 
 #function takes one argument
-cheat <- function(number){
-  if (number == 6){
+cheat <- function(number="You gotta give me somethin'"){
+  x <- number
+  if (x == 6){
     cat("#Q3.1.6 \n#use build-in dataset ChickWeight and recreate ggplot
 #get max weight for Chicken 1,20,3,40,5 \nView(ChickWeight)
 \nchickens <- c(1,20,3,40,5) \nmax_weight <- numeric()
@@ -35,7 +36,7 @@ ggplot(new_chickens, aes(x = chickens, y = max_weight))+
     geom_col() +
     scale_x_discrete(labels = labels)
   ")
-  }else if (number == 11){
+  }else if (x == 11){
     cat("#Q3.1.11 \n# recreate an animated plot \nlibrary(gganimate)
 cranlogs::cran_downloads() \nlibrary(cranlogs) 
 \n#see variables and combine to one df; put packages and dates into inverted commas
@@ -50,7 +51,7 @@ my_packages <-
       labs(title=Package popularity over time)+
       transition_reveal(date)
         ")
-  }else if (number ==1){
+  }else if (x == 1){
     cat("#Q3.1.1 \n#Simulate realistic grades for the exam in a histogram \n
 #add inverted commas to value of xlab, ylab and main
 x11() \nexam_grades <- rnorm(1:60, 7.5) 
@@ -64,6 +65,10 @@ x11() \nexam_grades <- rnorm(1:60, 7.5)
         cex.main = 2
       )
   ")
+  }else if (is.na(x)) {
+    return(x)
+  } else {
+  print("Sorry pal...")
   }
 }
 
