@@ -1,0 +1,11 @@
+remind_me <- function(){
+  a <- "Get that morning sunlight"
+  b <- "fast"
+  c <- "get exercise daily"
+  d <- "eat mindfully" 
+  e <- "see people" 
+  f <- "sleep"
+  g <- "love"
+  print("In case you forgot:")
+  sprintf("%s, %s, %s, %s, %s, %s, %s", a,b,c,d,e,f,g)
+}
