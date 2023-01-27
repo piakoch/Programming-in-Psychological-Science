@@ -1,5 +1,6 @@
-#function takes no arguments
-
+#########Assignment 3.2R 
+#Q3.2.1
+#function 1
 remind_me <- function(){
   a <- "Get that morning sunlight"
   b <- "fast"
@@ -9,14 +10,15 @@ remind_me <- function(){
   f <- "sleep"
   g <- "love"
   print("In case you forgot:")
-  sprintf("%s, %s, %s, %s, %s, %s, %s", a,b,c,d,e,f,g)
+  return(sprintf("%s, %s, %s, %s, %s, %s, %s", a,b,c,d,e,f,g))
 }
 
 remind_me()
 
 
 
-#function takes one argument
+
+#function 2
 cheat <- function(number="You gotta give me somethin'"){
   x <- number
   if (x == 6){
@@ -65,11 +67,12 @@ x11() \nexam_grades <- rnorm(1:60, 7.5)
         cex.main = 2
       )
   ")
-  }else if (is.na(x)) {
+  }else if (x == "You gotta give me somethin'") {
     return(x)
   } else {
-  print("Sorry pal...")
+    print("Sorry pal...")
   }
 }
 
-cheat()
+cheat(6)
+
